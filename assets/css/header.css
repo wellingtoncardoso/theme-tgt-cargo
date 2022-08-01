@@ -1,0 +1,91 @@
+/*
+*Nav menu
+*/
+header nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,.6);
+  z-index: 10;
+  display: none;
+}
+header nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  list-style: none;
+  height: 100%;
+}
+header nav ul li{
+  margin: 2rem 0px;
+  animation: navbar .5s linear backwards;
+}
+@media only screen and (max-width: 575px){
+  header nav ul li{
+    margin: .2rem 0px;
+  }
+}
+@keyframes navbar{
+  0%{
+    transform: translateY(-100rem);
+  }
+}
+header nav ul li:nth-child(1){
+  animation-delay: .2s;
+}
+header nav ul li:nth-child(2){
+  animation-delay: .4s;
+}
+header nav ul li:nth-child(3){
+  animation-delay: .6s;
+}
+header nav ul li:nth-child(4){
+  animation-delay: .8s;
+}
+header nav ul li:nth-child(5){
+  animation-delay: 1s;
+}
+
+header nav ul li a{
+  font-size: 2.5rem;
+  display: block;
+  width: 30rem;
+  height: 5rem;
+  line-height: 5rem;
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+}
+@media only screen and (max-width: 575px){
+  header nav ul li a{
+    font-size: 1.5rem;
+  }
+}
+header nav ul li a:hover{
+  color: #333;
+}
+
+/*
+*bars and times navbar
+*/
+header .fa-bars{
+  z-index: 1000;
+  position: fixed;
+  top: 4rem;
+  left: 7rem;
+  color: var(--blackLight);
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+@media only screen and (max-width: 575px){
+  header .fa-bars{
+    top: 2rem;
+    left: 3rem;
+  }
+}
+header .fa-times{
+  color: var(--white);
+}
