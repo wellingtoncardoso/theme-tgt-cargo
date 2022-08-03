@@ -1,0 +1,26 @@
+@media screen and (min-width: 768px){
+  .cw-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 992px){
+  #cw-services .slick-dots{
+    left: -290px;
+    width: 100%;
+    max-width: 250px;    
+  }
+}
+
+
+@media only screen and (max-width: 991px){
+  #cw-services .slick-dots{
+    bottom: -25px !important;
+  }
+}
+@media only screen and (max-width: 575px){
+  #cw-services .cw-services .card-service{
+    margin: 0 auto;
+  }
+}

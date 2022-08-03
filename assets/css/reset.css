@@ -27,9 +27,8 @@ body {
   font-size: 1rem;
   color: #444;
   line-height: 2;
-  background-color: var(--color-background);
+  background-color: transparent !important;
   font-family: var(--roboto);
-  user-select: none;
   overflow-x: hidden;
 }
 
@@ -99,7 +98,7 @@ pre {
  */
 a {
   background-color: transparent;
-  color: var(--color-dark);
+  color: var(--color-primary);
 }
 
 /*

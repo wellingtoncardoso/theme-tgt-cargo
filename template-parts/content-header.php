@@ -1,15 +1,22 @@
 <header>
-	<!-- header starts -->
-	<nav>
-		<ul>
-			<li><a href="https://www.linkedin.com/in/cardoso-wellington/" target="_blank" rel="nofollow"><i class="fab fa-linkedin-in"></i> cardoso-wellington</a></li>
-			<li><a href="https://www.instagram.com/com.ponto.web/" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i> com.ponto.web</a></li>
-			<li><a href="mailto:cardoso.s.wellington@gmail.com" target="_blank" rel="nofollow"><i class="fas fa-at"></i> contato</a></li>
-			<li><a href="https://web.whatsapp.com/send?phone=5519982903433" target="_blank" rel="nofollow"><i class="fab fa-whatsapp"></i> +55 19 98...</a></li>
-		</ul>
-	</nav>
-	<!-- nav ends -->
-	<div class="fa fa-bars"></div>
-	<!-- navbar -->
+  <nav class="navbar navbar-expand-md navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="<?php echo esc_url(home_url( '/' )); ?>"><img src="<?php echo get_template_directory_uri('')?>/assets/img/logo-primary-tgt-cargo.png" class="logo-header" alt="Logo TGT Cargo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsTGTCargo" aria-controls="navbarsTGTCargo" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsTGTCargo">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cw-about">Quem Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cw-services">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cw-partners">Certificações</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cw-contact">Contato / Orçamentos</a></li>
+        </ul>
+        <div class="my-2 my-md-0"><p><?php echo esc_html( 'Languages', 'cw' )?></p></div>
+      </div>
+    </div>
+  </nav>
 </header>
 <!-- header ends -->
