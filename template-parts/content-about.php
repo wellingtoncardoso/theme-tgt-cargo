@@ -4,10 +4,10 @@
       <div class="col-12 col-md-6">
         <div class="divider"></div>
         <div class="content">
-          <h2>Sobre a TGT Cargo</h2>
-          <p>Transcargo makes business flow. As one of the world’s leading non-asset-based supply chain management companies, we design and implement industry-leading solutions in both freight management.</p>
-          <p>Over 42,000 dedicated employees, working in 17 regional clusters around the globe, deliver operational excellence — to provide viable answers to the most challenging supply chain questions.</p>
-          <a href="" class="button"><?php echo esc_html( 'Lead more', 'cw' ); ?></a>
+          <h2>Agilidade e compromisso no transporte de cargas</h2>
+          <p>A TGT Cargo - Soluções Logísticas, possui matriz em Hortolândia/SP, e oferece como principal atividade o transporte rodoviário de cargas e o fulfillment (recebimento, conferência, armazenagem, monitoramento de mercadorias via WMS, picking, packing e distribuição para todo o Brasil)</p>
+          <p>Inaugurada em 2022, seus fundadores possuem mais de 15 anos de experiência no segmento de transportes, atuando de forma consultiva, compartilhando know how e expertise com seus colaboradores e clientes.</p>
+          <a href="<?php echo esc_url(home_url( '/' )); ?>quem-somos" class="button"><?php echo esc_html( 'Lead more', 'cw' ); ?></a>
         </div>
       </div>
       <div class="col-12 col-md-6">

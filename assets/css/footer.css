@@ -13,6 +13,7 @@ footer .redes-sociais{
   justify-content: center;
   align-items: center;
   gap: 15px;
+  margin-top: 2rem;
 }
 footer .redes-sociais .fab{
   color: var(--color-primary);

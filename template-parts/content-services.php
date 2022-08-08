@@ -5,25 +5,32 @@
         <div class="divider"></div>
         <div class="content">
           <h2>Nossos serviços</h2>
-          <p>Transcargo makes business flow. As one of the world’s leading non-asset-based supply chain management companies, we design and implement industry-leading solutions in both freight management.</p>
+          <p>Realizamos todos os tipos de transporte e fulfillment, contando com profissionais altamente capacitados, treinados e habilitados para o gerenciamento de suas cargas, contado com uma frota completa para seu atendimento.</p>
         </div>
       </div>
       <div class="col-12 col-md-9">
         <div class="cw-services">
           <div class="cw-slide-services">
-            <?php for( $i=0; $i<4; $i++ ) { ?>
+            <?php  
+              $args = array(
+                'post_type' => 'service',
+                'post_status' => 'public'
+              );
+              $my_query = new WP_Query( $args );
+
+              if( $my_query->have_posts() ):
+                while( $my_query->have_posts() ): $my_query->the_post(); 
+            ?>
             <div>
               <div class="card-service">
-                <div class="thumbnail"><img src="<?php echo get_template_directory_uri('')?>/assets/img/delete/image-service-01.jpg" alt="" <?php post_class( 'img' )?>></div>
                 <div class="content">
-                  <h3>Título</h3>
-                  <p>Transcargo makes business flow. As one of the world’s leading non-asset-based supply chain management companies, we design and implement.</p>
-                  <a href="" class="button"><?php echo esc_html( 'Lead more', 'cw' ); ?></a>
+                  <h3><?php the_title(); ?></h3>
+                  <p><?php the_content(); ?></p>
                 </div>
               </div>
             </div>
             <!-- end details cards services -->
-            <?php } ?>
+            <?php endwhile; endif; ?>
           </div>
         </div>
       </div>

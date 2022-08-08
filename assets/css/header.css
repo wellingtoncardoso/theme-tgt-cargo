@@ -1,3 +1,7 @@
+header .navbar-brand.logo-scroll{
+  display: none;
+  transition: .3s all linear;
+}
 .navbar.fixed-top{
   background-color: rgba(90,90,90, .7);
   transition: .3s all linear;
@@ -23,5 +27,5 @@
 }
 .navbar .navbar-nav .nav-item.active .nav-link{
   color: var(--color-white);
-  border-bottom: 3px solid var(--color-secondary);
+  /* border-bottom: 3px solid var(--color-secondary); */
 }

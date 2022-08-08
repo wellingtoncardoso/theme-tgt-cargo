@@ -35,6 +35,12 @@
   margin-bottom: 1.4rem;
   background-color: var(--color-secondary-background);
 }
+.divider-page{
+  width: 100%;
+  height: 1px;
+  margin-top: 1.4rem;
+  background-color: var(--color-secondary-background);
+}
 
 /*
 *content's
@@ -48,6 +54,28 @@ h2{
 p{
   line-height: 1.7 !important;
   margin-bottom: 1.4rem !important;
+}
+.entry-title{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: end;
+  color: var(--color-white);
+  font-weight: 300;
+  position: relative;
+  left: 125px;
+  bottom: 15px;
+}
+
+/*
+*background default
+*/
+.bg-page{
+  width: 100vw;
+  height: 300px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*
@@ -79,3 +107,20 @@ p{
   background-color: var(--color-secondary-background);
 }
 
+/*
+*contac form 7 - default
+*/
+.wpcf7 .wpcf7-number,
+.wpcf7 .wpcf7-text,
+.wpcf7 .wpcf7-textarea{
+  text-indent: 18px;
+}
+.wpcf7 .fas,
+.wpcf7 .fa{
+  position: relative;
+  left: 12px;
+  top: 27px;
+  font-weight: 600;
+  color: var(--color-primary);
+  z-index: 2;
+}

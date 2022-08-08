@@ -5,11 +5,9 @@
     align-items: center;
   }
 }
-@media screen and (min-width: 992px){
-  #cw-services .slick-dots{
-    left: -290px;
-    width: 100%;
-    max-width: 250px;    
+@media screen and (min-width: 992px){  
+  .navbar .navbar-nav{
+    margin: 0 auto;
   }
 }
 

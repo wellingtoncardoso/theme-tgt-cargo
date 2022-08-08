@@ -78,7 +78,7 @@
 }
 #cw-services .cw-services .card-service{
   width: 100%;
-  max-width: 255px;
+  max-width: 380px;
   height: 100%;
   background-color: var(--color-background);
 }
@@ -93,20 +93,25 @@
 #cw-services .cw-services .card-service .content p{
   color: var(--color-primaru);
   font-size: .875rem;
+  line-height: 1.2 !important;
+  margin-bottom: 5px !important;
+}
+#cw-services .slick-dots{ 
+  bottom: -45px !important;   
 }
 
 #cw-partners .thumbnail{
   width: 100%;
   max-width: 200px;
-  height: auto;
+  height: 380px;
   margin: 0 auto;
 }
 #cw-partners .thumbnail img{
   width: 100%;
   max-width: 150px;
-  height: auto;
+  height: 380px;
   margin: 0 auto;
-  object-fit: cover;
+  object-fit: contain;
   -webkit-filter: grayscale(100%);
   opacity: .7;
   transition: .3s all ease-in-out;
@@ -117,9 +122,6 @@
   opacity: 1;
 }
 
-#cw-contact{
-  background-color: var(--color-background-rgba);
-}
 #cw-contact .column-1,
 #cw-contact .column-2{
   width: 100%;
@@ -127,12 +129,50 @@
   padding-left:30px;
   padding-right: 30px;
 }
+#cw-contact .column-1{
+  background-color: var(--color-background-rgba);
+}
 #cw-contact .column-2{
   background-color: var(--color-primary-background);
 }
+#cw-contact .column-2 label,
 #cw-contact .column-2 h2{
   color: var(--color-white);
 }
+#cw-contact .column-1 ::-webkit-input-placeholder,
+#cw-contact .column-2 ::-webkit-input-placeholder,
+#cw-contact .column-1 label,
+#cw-contact .column-2 label{
+  font-size: .875rem;
+}
+#cw-contact .column-1 label,
+#cw-contact .column-2 label{
+  margin-bottom: 0 !important;
+}
+#cw-contact .column-1 input:focus{
+  border-color: var(--color-primary) !important;
+}
+#cw-contact .column-2 input:focus{
+  border-color: var(--color-secondary) !important;
+}
+
+#cw-contact .column-2 hr{
+  margin: 1rem 0;
+  background-color: var(--color-white);
+}
 #cw-contact .column-2 .divider{
   background-color: var(--color-white);
+}
+
+#cw-contact .column-1 .btn,
+#cw-contact .column-2 .btn{
+  width: 100%;  
+  color: var(--color-white);
+  padding: .7rem;
+}
+#cw-contact .column-1 .btn{
+  background-color: var(--color-primary-background);
+}
+#cw-contact .column-2 .btn{
+  background-color: var(--color-secondary-background);
 }

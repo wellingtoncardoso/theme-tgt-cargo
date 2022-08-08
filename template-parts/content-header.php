@@ -1,7 +1,8 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="<?php echo esc_url(home_url( '/' )); ?>"><img src="<?php echo get_template_directory_uri('')?>/assets/img/logo-primary-tgt-cargo.png" class="logo-header" alt="Logo TGT Cargo"></a>
+      <a class="navbar-brand logo-scroll" href="<?php echo esc_url(home_url( '/' )); ?>"><img src="<?php echo get_template_directory_uri('')?>/assets/img/logo-primary-tgt-cargo.png" class="logo-header" alt="Logo TGT Cargo"></a>
+      <a class="navbar-brand logo-fixed" href="<?php echo esc_url(home_url( '/' )); ?>"><img src="<?php echo get_template_directory_uri('')?>/assets/img/logo-white-tgt-cargo.png" class="logo-header" alt="Logo TGT Cargo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsTGTCargo" aria-controls="navbarsTGTCargo" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

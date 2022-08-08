@@ -77,21 +77,23 @@ function cw_scripts_styles(){
 		wp_enqueue_style('common-css', get_stylesheet_directory_uri().'/assets/css/common.css', null, 'all');
 		wp_enqueue_style('media-css', get_stylesheet_directory_uri().'/assets/css/media.css', null, 'all');
 		//external sources
-		wp_enqueue_style('fontAwesome','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css', array(),'5.15.4');
+		wp_enqueue_style('font-awesome-min-css','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array(),'5.15.4');
 		/*Script*/
-		wp_enqueue_script('main',get_stylesheet_directory_uri().'/assets/js/main.js', array('jquery'),'1.0.0', true);
+		wp_enqueue_script('main-js',get_stylesheet_directory_uri().'/assets/js/main.js', array('jquery'),'1.0.0', true);
 	}
 	/*Style*/	
-	wp_enqueue_style('slickTheme',get_stylesheet_directory_uri().'/vendor/slick/slick-theme.css', array(),'1.0.0');
-	wp_enqueue_style('slick',get_stylesheet_directory_uri().'/vendor/slick/slick.css', array(),'1.0.0');
-	wp_enqueue_style('bootstrap',get_stylesheet_directory_uri().'/vendor/bootstrap/bootstrap.min.css', array(),'4.4.1');
+	wp_enqueue_style('slick-theme-css',get_stylesheet_directory_uri().'/vendor/slick/slick-theme.css', array(),'1.0.0');
+	wp_enqueue_style('slick-css',get_stylesheet_directory_uri().'/vendor/slick/slick.css', array(),'1.0.0');
+	wp_enqueue_style('bootstrap-min-css',get_stylesheet_directory_uri().'/vendor/bootstrap/bootstrap.min.css', array(),'4.4.1');
 	/*Script*/
 	// wp_enqueue_script('jquery','https://code.jquery.com/jquery-3.3.1.slim.min.js',array(),'3.3.1');		
-	wp_enqueue_script('jquery','https://code.jquery.com/jquery-3.4.1.min.js',array(),'3.4.1'); 
+	wp_enqueue_script('jquery-js','https://code.jquery.com/jquery-3.4.1.min.js',array(),'3.4.1'); 
 	wp_enqueue_script('slick-min',get_stylesheet_directory_uri().'/vendor/slick/slick.min.js', array('jquery'),'1.0.0', true);	
 	wp_enqueue_script('bootstrap-min',get_stylesheet_directory_uri().'/vendor/bootstrap/bootstrap.min.js', array('jquery'),'5.0.2', true);
 	wp_enqueue_script('bootstrap-bundle-min',get_stylesheet_directory_uri().'/vendor/bootstrap/bootstrap-bundle.min.js', array('jquery'),'4.0.0', true);
 	wp_enqueue_script('popper-min',get_stylesheet_directory_uri().'/vendor/bootstrap/popper.min.js', array('jquery'),'2.9.2', true);
+	wp_enqueue_script('mask-js',get_stylesheet_directory_uri().'/vendor/mask/jquery.mask.js', array('jquery'),'1.14.15', true);
+	wp_enqueue_script('mask-min-js',get_stylesheet_directory_uri().'/vendor/mask/jquery.mask.min.js', array('jquery'),'1.14.15', true);
 }//style and script
 add_action('wp_enqueue_scripts', 'cw_scripts_styles');
 
@@ -107,4 +109,42 @@ function get_excerpt(){
 	$excerpt = substr($excerpt, 0, strripos($excerpt, " "));
 	$excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
 	return $excerpt;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// SERVICES
+//////////////////////////////////////////////////////////////////////////////////////////////
+add_action( 'init', 'service' );
+function service(){
+	$labels = array(
+		'name'						=> __( 'Service' ),
+		'singylar_name'		=> __( 'service' ),
+		'add_new'					=> __( 'Add New - Service' ),
+		'add_new_item'		=> __( 'Add New - Service' ),
+		'edit_item'				=> __( 'Edit Service' ),
+		'new_item'				=> __( 'New Service' ),
+		'all_items'				=> __( 'All Service' ),
+		'view_item'				=> __( 'View Service' ),
+		'search_items'		=> __( 'Search Service' ),
+		'featured_image'	=> 'Image',
+		'set_featured_image' => 'Add Image',
+		'menu_name'				=> 'Service',
+	);
+	$args = array(
+		'labels' 					=> $labels,
+		'description'			=> __( 'Services of the companu I want TGT Cargo' ),
+		'public'					=> true,
+		'taxonomies'			=> array( 'category' ),
+		'menu_positin'		=> 5,
+		'supports'				=> array(  'title', 'editor' ),
+		'has_archive'			=> true,
+		'show_in_admin_bar'	=> false,
+		'show_in_nav_menus'	=> false,
+		'query_var'				=> true,
+		'hierarchical'		=> false,
+		'rewrite'					=> array( 'slug', 'servico' ),
+		'menu_item'				=> 'dashicons-plus',
+	);
+	register_post_type( 'service', $args );
+	flush_rewrite_rules();	
 }
