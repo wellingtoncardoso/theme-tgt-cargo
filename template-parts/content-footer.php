@@ -20,7 +20,8 @@
       <div class="copyright">
         <div class="cw-flex">
           <div><p><?php echo esc_html( 'Copyright &copy; 2022. Todos os direitos reservados a TGT Cargo', 'cw' ); ?></p></div>
-          <div><p><?php echo esc_html( 'Developed by: Com Ponto Web', 'cw' ); ?> </p></div>
+          <div><p><?php echo "Developed by: '<a href='https://compontoweb.com.br/' target='_blank'> Com Ponto Web </a>"; 
+          ?> </p></div>
         </div>
       </div>
     </div>
