@@ -15,7 +15,7 @@
           <li class="nav-item"><a class="nav-link" href="#cw-partners">Certificações</a></li>
           <li class="nav-item"><a class="nav-link" href="#cw-contact">Contato / Orçamentos</a></li>
         </ul>
-        <div class="my-2 my-md-0"><p><?php echo esc_html( 'Languages', 'cw' )?></p></div>
+        <div class="my-2 my-md-0 d-flex"><?php echo do_shortcode('[gtranslate]'); ?></div>
       </div>
     </div>
   </nav>

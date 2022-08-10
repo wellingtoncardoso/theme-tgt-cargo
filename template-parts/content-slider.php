@@ -33,4 +33,8 @@
     </div>
     <!-- end div -->
   </div>
+  <div class="cw-slider-nav">
+    <div class="slider-item"><span><i class="fa fa-truck"></i></span></div>
+    <div class="slider-item"><span><i class="fa fa-ship"></i></span></div>
+  </div>
 </div>

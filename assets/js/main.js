@@ -23,14 +23,23 @@ jQuery(document).ready(function($){
 
   //slick slider
   $('.cw-slider').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 3100,
+    arrows: false,
     fade: true,
-    cssEase: 'linear'
+    asNavFor: '.cw-slider-nav'
   })
+  $('.cw-slider-nav').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    asNavFor: '.cw-slider',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true
+  })
+  
   $('.cw-slide-services').slick({
     dots: true,
     infinite: false,

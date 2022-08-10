@@ -8,9 +8,9 @@
       </div>
       <div class="col-12 col-md-4">
         <ul class="redes-sociais">
-          <li><i class="fab fa-facebook"><a href=""></a></i></li>
-          <li><i class="fab fa-instagram"><a href=""></a></i></li>
-          <li><i class="fab fa-youtube"><a href=""></a></i></li>
+          <li><a href="" target="_blank"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="" target="_blank"><i class="fab fa-youtube"></i></a></li>
         </ul>
       </div>
     </div>
@@ -19,7 +19,7 @@
     <div class="row">
       <div class="copyright">
         <div class="cw-flex">
-          <div><p><?php echo esc_html( 'Copyright &copy; 2022. All rights reserved', 'cw' ); ?></p></div>
+          <div><p><?php echo esc_html( 'Copyright &copy; 2022. Todos os direitos reservados a TGT Cargo', 'cw' ); ?></p></div>
           <div><p><?php echo esc_html( 'Developed by: Com Ponto Web', 'cw' ); ?> </p></div>
         </div>
       </div>

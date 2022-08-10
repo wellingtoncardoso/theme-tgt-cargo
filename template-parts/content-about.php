@@ -7,7 +7,7 @@
           <h2>Agilidade e compromisso no transporte de cargas</h2>
           <p>A TGT Cargo - Soluções Logísticas, possui matriz em Hortolândia/SP, e oferece como principal atividade o transporte rodoviário de cargas e o fulfillment (recebimento, conferência, armazenagem, monitoramento de mercadorias via WMS, picking, packing e distribuição para todo o Brasil)</p>
           <p>Inaugurada em 2022, seus fundadores possuem mais de 15 anos de experiência no segmento de transportes, atuando de forma consultiva, compartilhando know how e expertise com seus colaboradores e clientes.</p>
-          <a href="<?php echo esc_url(home_url( '/' )); ?>quem-somos" class="button"><?php echo esc_html( 'Lead more', 'cw' ); ?></a>
+          <a href="<?php echo esc_url(home_url( '/' )); ?>quem-somos" class="button"><?php echo esc_html( 'Saiba mais', 'cw' ); ?></a>
         </div>
       </div>
       <div class="col-12 col-md-6">

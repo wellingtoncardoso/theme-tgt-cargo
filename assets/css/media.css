@@ -1,3 +1,13 @@
+@media screen and (min-width: 992px){  
+  .navbar .navbar-nav{
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 991px){
+  #cw-services .slick-dots{
+    bottom: -25px !important;
+  }
+}
 @media screen and (min-width: 768px){
   .cw-flex{
     display: flex;
@@ -5,16 +15,9 @@
     align-items: center;
   }
 }
-@media screen and (min-width: 992px){  
-  .navbar .navbar-nav{
-    margin: 0 auto;
-  }
-}
-
-
-@media only screen and (max-width: 991px){
-  #cw-services .slick-dots{
-    bottom: -25px !important;
+@media only screen and (max-width: 767px){
+  .cw-flex{
+    text-align: center;
   }
 }
 @media only screen and (max-width: 575px){
