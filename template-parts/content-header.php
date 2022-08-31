@@ -9,7 +9,7 @@
 
       <div class="collapse navbar-collapse" id="navbarsTGTCargo">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item active"><a class="nav-link" href="<?php echo esc_url( home_url('/') ); ?>#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#cw-about">Quem Somos</a></li>
           <li class="nav-item"><a class="nav-link" href="#cw-services">Serviços</a></li>
           <li class="nav-item"><a class="nav-link" href="#cw-partners">Certificações</a></li>

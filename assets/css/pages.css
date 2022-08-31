@@ -104,25 +104,43 @@
 #cw-services .content p{
   color: var(--color-white);
 }
+#cw-services .cw-services{
+  margin: 1rem 0;
+}
 #cw-services .cw-services .card-service{
   width: 100%;
   max-width: 380px;
   height: 100%;
+  box-shadow: 0 .1rem 2rem rgb(255 255 255 / 40%);
+  transition: .3s all ease-in-out;
+}
+#cw-services .cw-services .card-service:hover{
   background-color: var(--color-background);
+}
+
+#cw-services .cw-services .card-service:hover .content h3,
+#cw-services .cw-services .card-service:hover .content span,
+#cw-services .cw-services .card-service:hover .content p{
+  cursor: pointer;
+  color: var(--color-primaru);
 }
 #cw-services .cw-services .card-service .content{
   padding: 35px 25px;
+  min-height: 300px;
 }
 #cw-services .cw-services .card-service .content h3{
   font-size: 1.125rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  color: var(--color-white);
 }
+#cw-services .cw-services .card-service .content span,
 #cw-services .cw-services .card-service .content p{
   color: var(--color-primaru);
   font-size: .875rem;
   line-height: 1.2 !important;
   margin-bottom: 5px !important;
+  color: var(--color-white);
 }
 #cw-services .slick-dots{ 
   bottom: -45px !important;   
@@ -133,6 +151,7 @@
   max-width: 200px;
   height: 380px;
   margin: 0 auto;
+  padding: 30px 0;
 }
 #cw-partners .thumbnail img{
   width: 100%;
@@ -154,7 +173,7 @@
 #cw-contact .column-2{
   width: 100%;
   max-width: 100%;
-  padding: 125px 30px;
+  padding: 35px 30px;
 }
 #cw-contact .column-1{
   background-color: var(--color-background-rgba);

@@ -1,7 +1,7 @@
 <section id="cw-about" class="cw-section">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6" data-anime="left">
         <div class="divider"></div>
         <div class="content">
           <h2>Agilidade e compromisso no transporte de cargas</h2>
@@ -10,7 +10,7 @@
           <a href="<?php echo esc_url(home_url( '/' )); ?>quem-somos" class="button"><?php echo esc_html( 'Saiba mais', 'cw' ); ?></a>
         </div>
       </div>
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6" data-anime="right">
         <div class="thumbnail">
           <img src="<?php echo get_template_directory_uri('')?>/assets/img/delete/image-01.jpg" alt="" <?php post_class( 'img' ) ?>>
         </div>

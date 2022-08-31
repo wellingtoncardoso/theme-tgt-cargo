@@ -6,7 +6,7 @@
         <div class="content">
           <div><i class="fa fa-check"></i></div>
           <div class="details">
-            <div class="number">320</div>
+            <div class="number timer count-title count-number" data-to="800" data-speed="320"></div>
             <span>Projetos Feitos</span>
           </div>
         </div>

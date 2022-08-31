@@ -1,4 +1,15 @@
 jQuery(document).ready(function($){
+  //section anchor effect with internal link
+  $( '.navbar-nav a[href^="#"]' ).on( 'click', function(e) {
+    e.preventDefault();
+    var id = $( this ).attr( 'href' ),
+        targetOffset = $( id ).offset().top
+     
+    $( 'html, body' ).animate({ 
+      scrollTop: targetOffset - 102
+    }, 300)
+  } )
+
   // fixed top nav add background whant the scroll in page
   $(window).scroll(function(){
     if($(window).scrollTop() > 50){
@@ -83,6 +94,136 @@ jQuery(document).ready(function($){
         }
       }
     ]
+  })
+
+   //effect debounce 
+   debounce = function(func, wait, immediate){
+    var timeout
+    return function(){
+      var context = this, args = arguments
+      var later = function(){
+        timeout = null
+        if(!immediate) func.apply(context, args)
+      }
+      var callNow = immediate && !timeout
+      clearTimeout(timeout)
+      timeout = setTimeout(later, wait)
+      if(callNow) func.apply(context, args)
+    }
+  }
+
+  //data-anime
+  const target = document.querySelectorAll('[data-anime]')
+  const animetion_scroll = 'animate'
+
+  function anime_scroll(){
+    const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4)
+    //top of the comparison window with the specific target
+    target.forEach(function(element){
+      if((windowTop) > element.offsetTop){
+        element.classList.add(animetion_scroll)
+      }else{
+        element.classList.remove(animetion_scroll)
+      }
+    })
+  }
+  anime_scroll()
+  if(target.length){
+    window.addEventListener('scroll', debounce(function(){
+      anime_scroll()
+    }, 300))    
+  }
+
+  // count of number bussiness
+  (function ($){
+    $.fn.countTo = function (options){
+      options = options || {};
+      
+      return $(this).each(function (){
+        var settings = $.extend({}, $.fn.countTo.defaults,{
+          from:            $(this).data('from'),
+          to:              $(this).data('to'),
+          speed:           $(this).data('speed'),
+          refreshInterval: $(this).data('refresh-interval'),
+          decimals:        $(this).data('decimals')
+        }, options);
+        
+        var loops = Math.ceil(settings.speed / settings.refreshInterval),
+          increment = (settings.to - settings.from) / loops
+        
+        var self = this,
+          $self = $(this),
+          loopCount = 0,
+          value = settings.from,
+          data = $self.data('countTo') || {}
+        
+        $self.data('countTo', data)
+      
+        if (data.interval) {
+          clearInterval(data.interval)
+        }
+        data.interval = setInterval(updateTimer, settings.refreshInterval)
+        render(value)
+        
+        function updateTimer(){
+          value += increment
+          loopCount++
+          
+          render(value)
+          
+          if (typeof(settings.onUpdate) == 'function'){
+            settings.onUpdate.call(self, value)
+          }
+          
+          if (loopCount >= loops){
+            $self.removeData('countTo')
+            clearInterval(data.interval)
+            value = settings.to
+            
+            if (typeof(settings.onComplete) == 'function'){
+              settings.onComplete.call(self, value)
+            }
+          }
+        }
+        
+        function render(value){
+          var formattedValue = settings.formatter.call(self, value, settings)
+          $self.html(formattedValue)
+        }
+      })
+    }
+    
+    $.fn.countTo.defaults = {
+      from: 0,               
+      to: 0,                 
+      speed: 3000,          
+      refreshInterval: 100,  
+      decimals: 0,           
+      formatter: formatter,  
+      onUpdate: null,        
+      onComplete: null       
+    }
+    
+    function formatter(value, settings){
+      return value.toFixed(settings.decimals)
+    }
+  }(jQuery))
+  
+  jQuery(function($){
+    // custom formatting example
+    $('.count-number').data('countToOptions', {
+    formatter: function (value, options) {
+      return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, '.')
+    }
+    })
+    
+    $('.timer').each(count) 
+    
+    function count(options){
+    var $this = $(this)
+    options = $.extend({}, options || {}, $this.data('countToOptions') || {})
+    $this.countTo(options)
+    }
   })
 
 });
