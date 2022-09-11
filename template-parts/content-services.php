@@ -20,9 +20,10 @@
         if( $my_query->have_posts() ):
           while( $my_query->have_posts() ): $my_query->the_post(); 
       ?>
-      <div class="col-12 col-sm-6 col-lg-4" data-anime="bottom">
+      <div class="col-12 col-sm-6 col-lg-4 m-auto">
         <div class="cw-services">
           <div class="card-service">
+            <div class="item"><i class="fa fa-check"></i></div>
             <div class="content">
               <h3><?php the_title(); ?></h3>
               <p><?php the_content(); ?></p>

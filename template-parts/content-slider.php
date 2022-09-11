@@ -9,7 +9,7 @@
             <div class="content">
               <div class="container">
                 <div class="row">
-                  <div class="col-12 col-sm-10 col-md-6 col-xl-8 cw-div-opacity">
+                  <div class="col-12 col-sm-10 col-xl-8 m-auto cw-div-opacity">
                     <div class="details"><?php echo $news_desc[ 'content' ]; ?></div>  
                   </div>
                 </div>

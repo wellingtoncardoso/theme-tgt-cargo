@@ -1,4 +1,4 @@
-<section id="cw-partners" class="cw-section" data-anime="bottom">
+<section id="cw-partners" class="cw-section">
   <div class="container">
     <div class="row">
       <div class="col-12" data-anime="top">

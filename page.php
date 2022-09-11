@@ -3,7 +3,7 @@
 		background-image: url( '<?php echo the_field( 'banner_page' ); ?>' )">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 </div>
-<div class="container cw-section">
+<main class="container cw-section">
  	<div class="row">
  		<?php the_post(); ?>
  		<div id="post-<?php the_ID(); ?>" <?php post_class( 'col-12' ); ?>>
@@ -19,6 +19,6 @@
 	<div class="row">
 		<div class="col-12"><div class="divider-page"></div></div>
 	</div>
-</div><!-- container -->
+</main><!-- container -->
  
 <?php get_footer(); ?>

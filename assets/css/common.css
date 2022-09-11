@@ -34,6 +34,13 @@
 }
 
 /*
+*display's
+*/
+.hide{
+  display: none !important;
+}
+
+/*
 *divider's
 */
 .divider{
@@ -130,4 +137,8 @@ p{
   font-weight: 600;
   color: var(--color-primary);
   z-index: 2;
+}
+.wpcf7 #destino.wpcf7-text,
+.wpcf7 #origem.wpcf7-text{
+  text-indent: 0px !important;
 }

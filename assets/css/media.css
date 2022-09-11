@@ -17,27 +17,6 @@
     justify-content: space-between;
     align-items: center;
   }
-  /* data anime */
-  [data-anime]{
-    opacity: 0;
-    transition: .3s all ease;
-  }
-  [data-anime="left"]{
-    transform: translate3d(-50px, 0px , 0px);
-  }
-  [data-anime="right"]{
-    transform: translate3d(50px, 0px , 0px);
-  }
-  [data-anime="top"]{
-    transform: translate3d(0px, -50px , 0px);
-  }
-  [data-anime="bottom"]{
-    transform: translate3d(0px, 50px , 0px);
-  }
-  [data-anime].animate{
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-  }
 }
 
 @media only screen and (max-width: 767px){
